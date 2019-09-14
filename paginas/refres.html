@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+   <title>Nobleza Camba-Refrescos</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="stylesheet" href="../css/estilo.css">
+   <script type="text/javascript">
+      var jarraml, jarragl, jarramc, jarragc, jarramm, jarragm = 0;
+
+      function iniciarEvento() {
+         btnC = document.getElementById("calcular");
+         btnC.addEventListener("click", calculart, false);
+      }
+
+      function calculart() {
+         jarraml = parseFloat(document.getElementById("jmli").value);
+         jarragl = parseFloat(document.getElementById("jgli").value);
+         jarramc = parseFloat(document.getElementById("jmc").value);
+         jarragc = parseFloat(document.getElementById("jgc").value);
+         jarramm = parseFloat(document.getElementById("jmm").value);
+         jarragm = parseFloat(document.getElementById("jgm").value);
+
+         total = (jarraml * 5) + (jarragl * 10) + (jarramc * 5) + (jarragc * 10) + (jarramm * 5) + (jarragm * 10);
+         document.getElementById("total").value = total
+      }
+      window.addEventListener("click", iniciarEvento, false);
+   </script>
+</head>
+
+<body>
+   <div id="contenido">
+      <header style="">
+         <span id="titulo"><a href="../index.html"> <span>NOBLEZA </span>CAMBA</a>
+         </span>
+         <span id="subtitulo">Abriendo fronteras..!!</span>
+      </header>
+      <!-- / fin de la cabecera -->
+
+      <!-- Aqui vamos a redireccionar nuestro menu a otras paginas -->
+      <nav>
+         <ul>
+            <li><a href="../index.html" target="_blank">Inicio</a></li>
+            <li><a href="pt.html" target="_blank">Platos tipicos</a></li>
+            <li><a href="refres.html">Refrescos</a></li>
+            <li><a href="gaseo.html" target="_blank">Gaseosas</a></li>
+         </ul>
+      </nav>
+      <!-- / nav -->
+
+      <!-- contenido de la pagina por secciones  -->
+      <section id="contenidodelassecciones">
+         <h1>Todo lo relacionado con platos tipicos de <span class="color">SANTA CRUZ</span> y mucho mas !!</h1>
+
+         <h2>En esta pagina vas a encontrar los mejores platos tipicos, refrescos y gaseosas que ofrece el restaurant
+            &nbsp;NOBLEZA CAMBA&nbsp;&nbsp;con sus respectivos precios de cada uno de ellos</h2>
+
+         <h3 id="anuncios">Refrescos a servir</h3>
+         <div class="noticias">
+            <!-- la etiqueta figure es para que podamos modificarla en nuestro estilo las imagenes
+            el atributo alt="" es para darle una descripcion a la imagen-->
+            <figure>
+               <a>
+                  <img src="../imagenes/limo.jpg" alt="" class="thumb" >
+               </a><br> Riqu&iacute;simo refresco de limonada.<br> Precio (Jarra mediana): 5Bs. (Jarra grande): 10Bs.<br>
+               <br>Cantidad (Jarra mediana):
+               <input type="number" name="sencillo" id="jmli" value="0" min="0" max="50"><br>
+               <br>Cantidad (Jarra grande):
+               <input type="number" name="cp" id="jgli" value="0">
+            </figure>
+         </div>
+         <div class="noticias1">
+            <figure>
+               <a>
+                  <img src="../imagenes/chicha.jpg" alt="" class="thumb" >
+               </a><br> Zuculenta chicha camba.<br> Precio (Jarra mediana): 5Bs. (Jarra grande): 10Bs.<br>
+               <br>Cantidad (Jarra mediana):
+               <input type="number" name="sencillo" id="jmc" value="0" min="0" max="50"><br>
+               <br>Cantidad (Jarra grande):
+               <input type="number" name="cp" id="jgc" value="0" min="0" max="50">
+            </figure>
+         </div>
+         <figure>
+            <a>
+               <img src="../imagenes/moco.jpg" alt="" class="thumb" >
+            </a><br> Dulce refresco de mocochinchi.<br> Precio (Jarra mediana): 5Bs. (Jarra grande): 10Bs.<br>
+            <br>Cantidad (Jarra mediana):
+            <input type="number" name="sencillo" id="jmm" value="0" min="0" max="50"><br>
+            <br>Cantidad (Jarra grande):
+            <input type="number" name="cp" id="jgm" value="0" min="0" max="50">
+         </figure> <br>
+         <input type="button" name="calcular" id="calcular" value="Total a pagar"><br><br>
+         <input type="text" name="total" id="total" value="">
+         <!-- /div de clase vid(video)-->
+         <h5><br>"Somos una empresa comprometida con la calidad y el buen servicio"</h5>
+         <h4 id="sobrefutbol">Espero te guste la pagina</h4>
+         <p>Si quieres saber mas acerca de nuestros servicios, puedes contactarnos a los siguientes numeros: <br> 33609788 </p><br>
+         <p>Atencion de sabado a jueves desde horas: 16:00</p>
+      </section>
+      <!-- /page content -->
+
+      <!-- pie de pagina -->
+      <footer>
+         Santa Cruz de la Sierra-Bolivia <br> Desallorrado por: Luis Felipe Maldonado Robles <br> &copy;2018 <a href=""></a>
+      </footer>
+      <!-- /fin de pie de pagina -->
+   </div>
+   <!-- fin del div (la division del contenedor)  en la pagina-->
+</body>
+
+</html>

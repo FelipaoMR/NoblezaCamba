@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+   <title>Nobleza Camba-Platos tipicos</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="stylesheet" href="../css/estilo.css">
+   <script type="text/javascript">
+      var kep, pic, ajl, rap, maj, ls, lcp, total = 0;
+
+      function iniciarEvento() {
+         btnC = document.getElementById("calcular");
+         btnC.addEventListener("click", calculart, false);
+      }
+
+      function calculart() {
+         kep = parseFloat(document.getElementById("keperi").value);
+         pic = parseFloat(document.getElementById("picante").value);
+         ajl = parseFloat(document.getElementById("lengua").value);
+         rap = parseFloat(document.getElementById("rapi").value);
+         maj = parseFloat(document.getElementById("maja").value);
+         ls = parseFloat(document.getElementById("sencillo").value);
+         lcp = parseFloat(document.getElementById("cp").value);
+
+         total = (kep * 15) + (pic * 15) + (ajl * 15) + (rap * 13) + (maj * 13) + (ls * 5) + (lcp * 10);
+         document.getElementById("total").value = total
+      }
+      window.addEventListener("click", iniciarEvento, false);
+   </script>
+</head>
+
+<body>
+   <div id="contenido">
+      <header style="">
+         <span id="titulo"><a href="../index.html"> <span>NOBLEZA </span>CAMBA</a>
+         </span>
+         <span id="subtitulo">Abriendo fronteras..!!</span>
+      </header>
+      <!-- / fin de la cabecera -->
+
+      <!-- Aqui vamos a redireccionar nuestro menu a otras paginas -->
+      <nav>
+         <ul>
+            <li><a href="../index.html" target="_blank">Inicio</a></li>
+            <li><a href="pt.html">Platos tipicos</a></li>
+            <li><a href="refres.html" target="_blank">Refrescos</a></li>
+            <li><a href="gaseo.html" target="_blank">Gaseosas</a></li>
+         </ul>
+      </nav>
+      <!-- / nav -->
+
+      <!-- contenido de la pagina por secciones  -->
+      <section id="contenidodelassecciones">
+         <h1>Todo lo relacionado con platos tipicos de <span class="color">SANTA CRUZ</span> y mucho mas !!</h1>
+
+         <h2>En esta pagina vas a encontrar los mejores platos tipicos, refrescos y gaseosas que ofrece el restaurant
+            &nbsp;NOBLEZA CAMBA&nbsp;&nbsp;con sus respectivos precios de cada uno de ellos</h2>
+
+         <h3 id="anuncios">Platos a servir</h3>
+         <div class="noticias">
+            <!-- la etiqueta figure es para que podamos modificarla en nuestro estilo las imagenes
+            el atributo alt="" es para darle una descripcion a la imagen-->
+            <figure>
+               <a>
+                  <img src="../imagenes/keperi.jpg" alt="" class="thumb" >
+               </a><br> Exquisito keperi al horno con su arroz amarillo, enzalada, yuca y platano frito. <br> Precio: 15Bs.<br> Cantidad:
+               <input type="number" name="keperi" id="keperi" value="0" min="0" max="50">
+            </figure>
+            <figure>
+               <a>
+                  <img src="../imagenes/lengua.jpg" alt="" class="thumb" >
+               </a><br> Potente aj&iacute; de lengua con su respectivo arroz amarillo, fideo, chuño y papa. <br> Precio: 15Bs.<br> Cantidad:
+               <input type="number" name="lengua" id="lengua" value="0" min="0" max="50">
+            </figure>
+            <figure>
+               <a>
+                  <img src="../imagenes/picante.jpg" alt="" class="thumb" >
+               </a><br> Monumental picante de gallina criolla con arroz amarillo, fideo, chuño y papa. <br> Precio: 15Bs.<br> Cantidad:
+               <input type="number" name="picante" id="picante" value="0" min="0" max="50">
+            </figure>
+         </div>
+         <div class="noticias">
+            <figure>
+               <a>
+                  <img src="../imagenes/rapi.jpg" alt="" class="thumb" >
+               </a><br> Positivo rapi al jugo con arroz amarillo, yuca y platano frito. <br> Precio: 13Bs.<br> Cantidad:
+               <input type="number" name="rapi" id="rapi" value="0" min="0" max="50">
+            </figure>
+            <figure>
+               <a>
+                  <img src="../imagenes/maja.jpg" alt="" class="thumb" >
+               </a><br> Brutal majadito batido de rapi con su huevo revuelto, yuca y platano frito. <br> Precio: 13Bs.<br> Cantidad:
+               <input type="number" name="maja" id="maja" value="0" min="0" max="50">
+            </figure>
+            <figure>
+               <a>
+                  <img src="../imagenes/locro.jpg" alt="" class="thumb" >
+               </a><br> Riqu&iacute;simo locro de gallina criolla. <br> Precio (sencillo): 5Bs. (con presa): 10Bs.<br>
+               <br>Cantidad (sencillo):
+               <input type="number" name="sencillo" id="sencillo" value="0" min="0" max="50"><br>
+               <br>Cantidad (con presa):
+               <input type="number" name="cp" id="cp" value="0" min="0" max="50">
+            </figure>
+         </div>
+         <input type="button" name="calcular" id="calcular" value="Total a pagar"><br><br>
+         <input type="text" name="total" id="total" value="">
+         <!-- /div de clase vid(video)-->
+         <h5><br>"Somos una empresa comprometida con la calidad y el buen servicio"</h5>
+         <h4 id="sobrefutbol">Espero te guste la pagina</h4>
+         <p>Si quieres saber mas acerca de nuestros servicios, puedes contactarnos a los siguientes numeros: <br> 33609788 </p><br>
+         <p>Atencion de sabado a jueves desde horas: 16:00</p>
+      </section>
+      <!-- /page content -->
+
+      <!-- pie de pagina -->
+      <footer>
+         Santa Cruz de la Sierra-Bolivia <br> Desallorrado por: Luis Felipe Maldonado Robles <br> &copy;2018 <a href=""></a>
+      </footer>
+      <!-- /fin de pie de pagina -->
+   </div>
+   <!-- fin del div (la division del contenedor)  en la pagina-->
+</body>
+
+</html>
